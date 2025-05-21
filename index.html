@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login WebFirebase</title>
+    <link rel="stylesheet" href="css/css.css">
 </head>
+
 <body>
-    
+    <div id="login" style="display: none;">
+        <h2>Login</h2>
+        <form id="formulario-login">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre-login" required>
+            <label for="email-login">Email</label>
+            <input type="email" id="email-login" required>
+            <button type="submit">Login</button>
+            <p>No tienes cuenta? <a href="#" id="show-register">Registrate aqui</a></p>
+        </form>
+    </div>
+
+    <div id="registration-section">
+        <h2>Registro</h2>
+        <form id="registration-form">
+            <label for="nombre-registro">Nombre de Usuario</label>
+            <input type="text" id="nombre-registro" required>
+            <label for="email-registro">Email</label>
+            <input type="email" id="email-registro" required>
+            <button type="submit">Registro</button>
+            <p>Tienes Cuenta? <a href="#" id="show-login">Inicia sesion aqui</a></p>
+        </form>
+    </div>
+
+    <div id="mensaje-registro" style="display: none;">
+        <h2>Has accedido!</h2>
+        <p>Gracias por iniciar sesion en esta web.</p>
+        <button id="cerrar-sesion">Cerrar Sesion</button>
+    </div>
+
+    <script src="js/controller.js"></script>
+ <script src="js/model.js"></script>
+<script src="js/usuario.js"></script>
+<script src="js/view.js"></script>
+
+
+     <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { 
+            getAuth, 
+            createUserWithEmailAndPassword, 
+            signInWithEmailAndPassword, 
+            signOut,
+            onAuthStateChanged,
+            updateProfile
+        } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+
+        // TODO: Reemplaza con tu configuración de Firebase
+        const firebaseConfig = {
+            apiKey: "tu-api-key",
+            authDomain: "tu-project.firebaseapp.com",
+            projectId: "tu-project-id",
+            storageBucket: "tu-project.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "tu-app-id"
+        };
+    </script>
 </body>
 </html>

@@ -1,11 +1,29 @@
 class usuario{
 
-constructor(nombre, edad) {
+constructor(nombre, email) {
 
     this.nombre = nombre;
 
-    this.edad = edad;
+    this.email = email;
 
+}
+
+getNombre() {
+    return this.nombre; 
+}
+
+setNombre(nombre) {
+    this.nombre = nombre;
+}
+
+getEmail() {
+    return this.email;
+}
+
+setEmail(email){
+
+    this.email = email; 
+    
 }
 
 }
