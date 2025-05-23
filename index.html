@@ -6,23 +6,24 @@
     <title>Login WebFirebase</title>
     <link rel="stylesheet" href="css/css.css">
     <script type="module" src="js/auth.js" defer></script>
-    <script tuype="module" src="js/login.js" defer></script>
+    <script type="module" src="js/login.js" defer></script>
 </head>
 
 <body>
-    <div id="login" style="display: none;">
+    <div id="login"  style="display: none;">
         <h2>Login</h2>
         <form id="formulario-login">
             <label for="email-login">Email</label>
             <input type="email" id="email-login" required>
             <label for="contraseña">Contraseña</label>
             <input type="password" id="contraseña-login" required>            
-            <button type="submit-login">Login</button>
+            <button id="submit-login" type="submit">Login</button>
             <p>No tienes cuenta? <a href="#" id="show-register">Registrate aqui</a></p>
         </form>
     </div>
 
-    <div id="registration-section">
+    <div id="registration-section" >
+        <h2>Registro</h2>
         <form id="registration-form">
               <label for="email-registro">Email</label>
             <input type="text" id="email-registro" required>

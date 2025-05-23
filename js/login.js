@@ -5,7 +5,6 @@
             signInWithEmailAndPassword, 
         } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyAE1WyYgGZ_h3trfhrcAXLnFpMX5dgALh0",
   authDomain: "ejercicionosqllogin.firebaseapp.com",
@@ -21,12 +20,11 @@ const auth = getAuth(app);
 
 export{
     auth,
-    createUserWithEmailAndPassword,
     signInWithEmailAndPassword
 }
 
-const email=document.getElementById("email-registro").value;
-const password=document.getElementById("contraseña-registro").value;
+const email=document.getElementById("email-login").value;
+const password=document.getElementById("contraseña-login").value;
 
 const submit=document.getElementById("submit-login");
 submit.addEventListener("click", function(event){
@@ -38,7 +36,8 @@ signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    alert("Iniciaste sesion");
+    
+    alert("Iniciaste sesion!!");
     // ...
   })
   .catch((error) => {
