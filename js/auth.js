@@ -19,10 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export{
-    auth,
-    createUserWithEmailAndPassword
-}
+
 
 const email=document.getElementById("email-registro").value;
 const password=document.getElementById("contraseña-registro").value;
@@ -35,16 +32,19 @@ const password=document.getElementById("contraseña-registro").value;
 
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    // Signed up 
+   
     const user = userCredential.user;
     
     alert("Usuario creado");
-    // ...
+       $("#login").show();
+    $("#registration-section").hide();
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    alert("Error al crear el usuario");
-    // ..
+    alert("Error al crear el usuario");   
   });
+
+   
+  
 })

@@ -34,16 +34,20 @@ const password=document.getElementById("contraseña-login").value;
 
 signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    // Signed up 
+   
     const user = userCredential.user;
     
     alert("Iniciaste sesion!!");
-    // ...
+     $("#login").hide();
+   $("#mensaje-registro").show();
+   
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    alert("Error al crear el usuario");
-    // ..
+    alert("Error al inciar sesion con el usuario");
+    
   });
+
+  
 })
